@@ -1,4 +1,4 @@
-package URLEncoder
+package urlencoder
 
 import (
 	"encoding/json"
