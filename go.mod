@@ -1,3 +1,3 @@
-module github.com/fruitgum/URLEncoder
+module github.com/fruitgum/urlencoder
 
 go 1.22
