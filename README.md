@@ -13,7 +13,7 @@ func main(){
     "filed2": "test",
     }`
 
-  postData, err := URLEncoder.EncodeBody(postFields) // Will return field1=0&field2=test
+  postData, err := urlencoder.EncodeBody(postFields) // Will return field1=0&field2=test
   r, err := http.NewRequest("POST", "https://expample.com", strings.NewReader(postData))
 }
 ```
