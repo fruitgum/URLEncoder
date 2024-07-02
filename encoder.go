@@ -1,23 +1,15 @@
 package urlencoder
 
 import (
-	"encoding/json"
 	"fmt"
 	"strings"
 )
 
-func EncodeBody(fields string) (string, error) {
-
-	var postData map[string]interface{}
-
-	err := json.Unmarshal([]byte(fields), &postData)
-	if err != nil {
-		return "", err
-	}
+func EncodeBody(body map[string]interface{}) (string, error) {
 
 	var keyPairs []string
 
-	for k, v := range postData {
+	for k, v := range body {
 		keyPair := fmt.Sprintf("%s=%v", k, v)
 		keyPairs = append(keyPairs, keyPair)
 	}
